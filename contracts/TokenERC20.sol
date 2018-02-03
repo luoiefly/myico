@@ -43,13 +43,13 @@ contract TokenERC20 {
     function TokenERC20(
         uint256 initialSupply,
         string tokenName,
-        uint8  tokenDecimal,
+        uint8  tokenDecimals,
         string tokenSymbol
     ) public {
         totalSupply = initialSupply * 10 ** uint256(decimals);  // Update total supply with the decimal amount
         balanceOf[msg.sender] = totalSupply;                // Give the creator all initial tokens
         name = tokenName;                                   // Set the name for display purposes
-        decimals = tokenDecimal;
+        decimals = tokenDecimals;
         symbol = tokenSymbol;                               // Set the symbol for display purposes
     }
 
